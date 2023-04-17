@@ -1,0 +1,2 @@
+!function(t){window.history&&history.pushState&&window.history.replaceState&&!navigator.userAgent.match(/((iPod|iPhone|iPad).+\bOS\s+[1-4]|WebApps\/.+CFNetwork)/)&&t.nette.ext("fidRemove",{init:function(){var e=this;setTimeout(function(){var t=window.location.toString(),i=t.indexOf("_fid=");-1!==i&&window.history.replaceState({},null,e.removeFid(t,i))},this.timeout)}},{timeout:3e3,removeFid:function(t,i){return t="?"!==(t=t.substr(0,i)+t.substr(i+9)).substr(i-1,1)&&"&"!==t.substr(i-1,1)?t:t.substr(0,i-1)+t.substr(i)}})}(jQuery);
+//# sourceMappingURL=fidRemove.ajax.js.map
